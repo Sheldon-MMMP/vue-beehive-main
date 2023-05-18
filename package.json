@@ -1,0 +1,106 @@
+{
+  "name": "vue-beehive",
+  "version": "0.1.0",
+  "author": "Imfdj",
+  "private": true,
+  "homepage": "https://github.com/Imfdj/vue-beehive",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:qiniu:preview": "cross-env BUILD_TARGET=qiniu VUE_APP_PREVIEW=true vue-cli-service build",
+    "build:qiniu": "cross-env BUILD_TARGET=qiniu vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint --fix",
+    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,tsx,css,less,scss,vue,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imfdj/vue-beehive.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "pretty-quick --staged",
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@sentry/browser": "^5.29.0",
+    "@sentry/integrations": "^5.29.0",
+    "@wcjiang/notify": "^2.0.12",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.4",
+    "echarts": "^5.1.1",
+    "element-ui": "^2.15.1",
+    "js-cookie": "^2.2.1",
+    "jsencrypt": "^3.0.0-rc.1",
+    "lodash": "^4.17.21",
+    "multi-download": "^3.0.0",
+    "node-rsa": "^1.1.1",
+    "nprogress": "^0.2.0",
+    "qs": "^6.10.1",
+    "vue": "^2.6.11",
+    "vue-cropper": "^0.5.5",
+    "vue-drag-verify-img-chip": "^1.1.1",
+    "vue-echarts": "^6.0.0-rc.5",
+    "vue-router": "^3.2.0",
+    "vue-socket.io": "^3.0.10",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.4.0",
+    "wangeditor": "^4.6.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/composition-api": "^1.0.0-rc.8",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-eslint": "^10.1.0",
+    "compression-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "husky": "^4.2.5",
+    "image-webpack-loader": "^6.0.0",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "qiniu": "^7.3.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpackbar": "^5.0.0-3"
+  },
+  "keywords": [
+    "vue",
+    "admin",
+    "dashboard",
+    "element-ui",
+    "vue-admin",
+    "element-admin",
+    "boilerplate",
+    "admin-template",
+    "management-system",
+    "beehive"
+  ],
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  }
+}
